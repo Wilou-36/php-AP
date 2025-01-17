@@ -1,25 +1,25 @@
 <?php
 
-class NomClass{
+class AppMVC{
     
     //déclaration d'un attribut
-    private $monattribut;
+    private $monapp;
 
-    public function __construct(){
-        $this -> monattribut = 10;
+    public function afficherPage($page){ 
+       if ($page == 1)$this -> page1();
+       else if ($page == 2) $this -> page2();
+       else $this -> page1();
     }
     
-
-    public function getmaMethode(){
-        return $this -> monattribut;
-
+    public function page1(){
+        echo "page 1";
     }
-    public function setmaMethode($value){
-        if(($value >= 0) && ( $value<10)){
-             $this -> monattribut = $value;
-        }
+
+    public function page2(){
+        echo "page 2";
     }
+
+
 }
-
 
 ?>
